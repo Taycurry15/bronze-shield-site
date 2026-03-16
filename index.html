@@ -252,9 +252,11 @@
   .hero-actions { justify-content: center; }
   .why-grid { grid-template-columns: 1fr; }
   .insights-grid { grid-template-columns: 1fr; }
+  #what-to-expect > .container > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 768px) {
   .hero-trust { flex-direction: column; align-items: center; gap: 1rem; }
+  #what-to-expect > .container > div:last-child { grid-template-columns: 1fr !important; }
 }
 </style>
 <!-- Analytics: Replace with real GTM, GA4, and LinkedIn IDs before production launch -->
@@ -311,10 +313,10 @@
     <div class="hero-inner">
       <div class="hero-badge animate-in">
         <span class="hero-badge-dot"></span>
-        SDVOSB &bull; TS/SCI Cleared &bull; CISM Certified
+        SDVOSB &bull; TS/SCI Cleared &bull; AI-Accelerated Compliance
       </div>
       <h1 class="animate-in delay-1">Get Your Systems <em>Authorized to Operate</em> — Without the Guesswork</h1>
-      <p class="hero-sub animate-in delay-2">We build battle-tested RMF packages, compress ATO timelines, and deliver CMMC-ready compliance — so defense contractors can focus on winning contracts, not chasing paperwork.</p>
+      <p class="hero-sub animate-in delay-2">We combine hands-on ISSM experience with AI-powered compliance automation to build battle-tested RMF packages, compress ATO timelines, and deliver CMMC-ready compliance — so you can focus on winning contracts, not chasing paperwork.</p>
       <div class="hero-actions animate-in delay-3">
         <a href="contact.html" class="btn-primary">Free Readiness Assessment →</a>
         <a href="services/index.html" class="btn-secondary">See Our Services</a>
@@ -325,8 +327,8 @@
           <div class="hero-trust-label">Years DoD Experience</div>
         </div>
         <div class="hero-trust-item">
-          <div class="hero-trust-value">100%</div>
-          <div class="hero-trust-label">ATO Success Rate (6 of 6)</div>
+          <div class="hero-trust-value">6 for 6</div>
+          <div class="hero-trust-label">ATO Packages Approved</div>
         </div>
         <div class="hero-trust-item">
           <div class="hero-trust-value">7mo</div>
@@ -430,26 +432,57 @@
   </div>
 </section>
 
+<!-- WHAT TO EXPECT -->
+<section class="section bg-charcoal" id="what-to-expect">
+  <div class="container">
+    <div class="section-label">What to Expect</div>
+    <h2 class="section-title">Plain English: How Engagements Work</h2>
+    <p class="section-subtitle">No 80-page SOWs. Here's what working with us actually looks like.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;">
+      <div style="background:var(--shield-slate);border:1px solid rgba(184,134,11,0.12);border-radius:12px;padding:2rem 1.5rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--shield-muted);margin-bottom:0.75rem;">Engagement Model</div>
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--shield-white);margin-bottom:0.5rem;">Fixed-Price Projects</div>
+        <p style="font-size:0.85rem;color:var(--shield-silver);line-height:1.7;">You get a scoped proposal with a flat fee before we start. No hourly billing surprises, no change orders for "discovered" work.</p>
+      </div>
+      <div style="background:var(--shield-slate);border:1px solid rgba(184,134,11,0.12);border-radius:12px;padding:2rem 1.5rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--shield-muted);margin-bottom:0.75rem;">Timeline</div>
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--shield-white);margin-bottom:0.5rem;">3–12 Months Typical</div>
+        <p style="font-size:0.85rem;color:var(--shield-silver);line-height:1.7;">CMMC gap analysis in 3–6 weeks. Full RMF packages in 4–12 months depending on system complexity. We give you a realistic date, not a sales date.</p>
+      </div>
+      <div style="background:var(--shield-slate);border:1px solid rgba(184,134,11,0.12);border-radius:12px;padding:2rem 1.5rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--shield-muted);margin-bottom:0.75rem;">Who You Work With</div>
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--shield-white);margin-bottom:0.5rem;">The Principal, Directly</div>
+        <p style="font-size:0.85rem;color:var(--shield-silver);line-height:1.7;">No bait-and-switch. The CISM-certified, TS/SCI cleared ISSM who scopes your project is the same person who executes it.</p>
+      </div>
+      <div style="background:var(--shield-slate);border:1px solid rgba(184,134,11,0.12);border-radius:12px;padding:2rem 1.5rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--shield-muted);margin-bottom:0.75rem;">What You Get</div>
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--shield-white);margin-bottom:0.5rem;">Audit-Ready Artifacts</div>
+        <p style="font-size:0.85rem;color:var(--shield-silver);line-height:1.7;">SSPs, POA&amp;Ms, implementation narratives, scan evidence, and everything else your AO or C3PAO needs — formatted, organized, and ready to submit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY US -->
-<section class="section bg-charcoal" id="why-us">
+<section class="section bg-black" id="why-us">
   <div class="container">
     <div class="section-label">Why The Bronze Shield</div>
     <h2 class="section-title">We've Sat in Your ISSM Chair.<br>That Changes Everything.</h2>
-    <p class="section-subtitle">Most consultants advise from the outside. We've held the authorization keys, managed the eMASS packages, and answered directly to AOs.</p>
+    <p class="section-subtitle">Most consultants advise from the outside. The Bronze Shield team has held the authorization keys, managed the eMASS packages, and answered directly to AOs.</p>
     <div class="why-grid">
       <div class="why-content">
         <div class="why-item">
           <div class="why-number">01</div>
           <div>
             <h4>Practitioner-Led, Not Slide-Deck Consulting</h4>
-            <p>Our team has served as the ISSM of record on active DoD programs — managing real eMASS workflows, adjudicating CAT I/II/III findings in ACAS, writing implementation narratives that survive SCA review, and delivering ATOs that hold through ConMon cycles.</p>
+            <p>The Bronze Shield's principal has served as the ISSM of record on active DoD programs — managing real eMASS workflows, adjudicating CAT I/II/III findings in ACAS, writing implementation narratives that survive SCA review, and delivering ATOs that hold through ConMon cycles.</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-number">02</div>
           <div>
             <h4>Compressed Timelines, Zero Rework</h4>
-            <p>We've achieved 7-month ATO timelines on IL5 systems — 61% faster than the DoD average of 18 months — through front-loaded artifact QA, pre-SCA evidence validation, and proactive AO engagement that eliminates review-cycle churn.</p>
+            <p>The Bronze Shield has achieved 7-month ATO timelines on IL5 systems — 61% faster than the DoD average of 18 months — through front-loaded artifact QA, pre-SCA evidence validation, and proactive AO engagement that eliminates review-cycle churn.</p>
           </div>
         </div>
         <div class="why-item">
@@ -462,16 +495,23 @@
         <div class="why-item">
           <div class="why-number">04</div>
           <div>
-            <h4>Small Business Agility, Enterprise Expertise</h4>
-            <p>As an SDVOSB, you get direct senior engagement — not a junior analyst learning on your contract. Plus set-aside eligibility for your procurement vehicle.</p>
+            <h4>AI-Accelerated Compliance Automation</h4>
+            <p>We deploy AI-powered tools that automate POA&amp;M tracking, milestone calculations, and eMASS-formatted exports — cutting manual compliance processing by 70%. Your team fixes vulnerabilities while the system handles the paperwork.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-number">05</div>
+          <div>
+            <h4>SDVOSB Agility, Enterprise Expertise</h4>
+            <p>Direct senior engagement — not a junior analyst learning on your contract. Plus set-aside eligibility for your procurement vehicle.</p>
           </div>
         </div>
       </div>
       <div class="why-stats">
         <h3>Performance at a Glance</h3>
         <div class="stat-row">
-          <div><div class="stat-label">ATO Success Rate</div><div class="stat-bar"><div class="stat-bar-fill" style="width:100%"></div></div></div>
-          <div class="stat-value">100%</div>
+          <div><div class="stat-label">ATO Packages Approved</div><div class="stat-bar"><div class="stat-bar-fill" style="width:100%"></div></div></div>
+          <div class="stat-value">6 / 6</div>
         </div>
         <div class="stat-row">
           <div><div class="stat-label">Avg. Timeline Compression</div><div class="stat-bar"><div class="stat-bar-fill" style="width:60%"></div></div></div>
@@ -489,7 +529,7 @@
           <div><div class="stat-label">Years of Cyber Operations</div><div class="stat-bar"><div class="stat-bar-fill" style="width:100%"></div></div></div>
           <div class="stat-value">10+</div>
         </div>
-        <p class="stat-footnote">*Based on 6 authorization engagements completed 2019–2026 across Navy, Army, Air Force, and private sector programs. Metrics independently verifiable through eMASS records and AO documentation.</p>
+        <p class="stat-footnote">*Based on 6 completed authorization engagements (2019–2026) across Navy, Army, Air Force, and private sector programs. Every package approved on first submission. Metrics verifiable through eMASS audit records and AO correspondence.</p>
       </div>
     </div>
   </div>
@@ -500,7 +540,7 @@
   <div class="container">
     <div class="section-label">Proven Results</div>
     <h2 class="section-title">Documented Outcomes,<br>Not Abstract Promises</h2>
-    <p class="section-subtitle">Every engagement is measured by one standard: did the system get authorized, and did the client win the contract?</p>
+    <p class="section-subtitle">Six authorization engagements. Six approvals. Here's what that looks like in practice.</p>
     <div class="results-grid">
       <article class="result-card">
         <div class="result-context">DoD Cloud Migration · Air Force</div>
@@ -515,9 +555,10 @@
       <article class="result-card">
         <div class="result-context">POA&M Automation · Navy PEO Digital</div>
         <h3>AI-Powered Compliance Automation</h3>
-        <p>Deployed an AI-driven POA&amp;M automation system that reduced manual compliance processing time and freed the security team for higher-priority remediation.</p>
+        <p>Deployed an AI-driven POA&amp;M automation system that cut manual compliance processing from 16 staff-hours to under 5 per cycle — freeing the security team for actual remediation instead of spreadsheet formatting.</p>
         <div class="result-metrics">
           <div><div class="result-metric-value">70%</div><div class="result-metric-label">Time Saved</div></div>
+          <div><div class="result-metric-value">16→5 hrs</div><div class="result-metric-label">Per POA&M Cycle</div></div>
           <div><div class="result-metric-value">AI</div><div class="result-metric-label">Automation</div></div>
         </div>
       </article>
