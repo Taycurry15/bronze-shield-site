@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="badgeBgSecPlus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    <filter id="badgeShadowSecPlus">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#badgeBgSecPlus)" stroke="#b8860b" stroke-width="2" filter="url(#badgeShadowSecPlus)"/>
+
+  <!-- Decorative outer ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#daa520" stroke-width="1" opacity="0.5"/>
+
+  <!-- Shield accent with plus symbol -->
+  <g opacity="0.5">
+    <path d="M 100 45 L 135 62 L 135 92 Q 135 120 100 142 Q 65 120 65 92 L 65 62 Z"
+          fill="none" stroke="#daa520" stroke-width="1.5"/>
+    <!-- Plus inside shield -->
+    <line x1="100" y1="75" x2="100" y2="105" stroke="#b8860b" stroke-width="2" opacity="0.6"/>
+    <line x1="85" y1="90" x2="115" y2="90" stroke="#b8860b" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Main text: SEC+ -->
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="28" font-weight="bold"
+        text-anchor="middle" fill="#daa520">SEC+</text>
+
+  <!-- Subtitle text -->
+  <text x="100" y="135" font-family="Arial, sans-serif" font-size="11"
+        text-anchor="middle" fill="#a0a0a0">CompTIA Certified</text>
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="9"
+        text-anchor="middle" fill="#666666">DoD 8140</text>
+</svg>

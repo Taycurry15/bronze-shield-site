@@ -1,0 +1,46 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="badgeBgTsSci" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    <filter id="badgeShadowTsSci">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle with stronger border for govt feel -->
+  <circle cx="100" cy="100" r="95" fill="url(#badgeBgTsSci)" stroke="#b8860b" stroke-width="3" filter="url(#badgeShadowTsSci)"/>
+
+  <!-- Double ring for official look -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#daa520" stroke-width="2" opacity="0.7"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#8b6508" stroke-width="1" opacity="0.5"/>
+
+  <!-- Lock icon in background -->
+  <g opacity="0.25">
+    <!-- Lock body -->
+    <rect x="85" y="65" width="30" height="25" rx="2" fill="none" stroke="#daa520" stroke-width="1.5"/>
+    <!-- Lock shackle -->
+    <path d="M 92 65 Q 92 50 100 50 Q 108 50 108 65" fill="none" stroke="#daa520" stroke-width="1.5"/>
+    <!-- Keyhole -->
+    <circle cx="100" cy="78" r="2" fill="#daa520"/>
+  </g>
+
+  <!-- Main text: TS/SCI -->
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="28" font-weight="bold"
+        text-anchor="middle" fill="#daa520">TS/SCI</text>
+
+  <!-- Subtitle text -->
+  <text x="100" y="135" font-family="Arial, sans-serif" font-size="12"
+        text-anchor="middle" fill="#a0a0a0">Active Clearance</text>
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="9"
+        text-anchor="middle" fill="#666666">Top Secret/SCI</text>
+
+  <!-- Decorative corner shields -->
+  <g opacity="0.4">
+    <path d="M 55 55 L 65 60 L 65 70 Q 65 75 55 80 Q 45 75 45 70 L 45 60 Z"
+          fill="none" stroke="#b8860b" stroke-width="1"/>
+    <path d="M 145 55 L 155 60 L 155 70 Q 155 75 145 80 Q 135 75 135 70 L 135 60 Z"
+          fill="none" stroke="#b8860b" stroke-width="1"/>
+  </g>
+</svg>

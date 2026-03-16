@@ -1,0 +1,141 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+      .timeline-text {
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        fill: #ffffff;
+        font-size: 13px;
+      }
+
+      .timeline-label {
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        fill: #a0a0a0;
+        font-size: 11px;
+      }
+
+      .timeline-title {
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        fill: #daa520;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .phase-bar {
+        stroke: #8b6508;
+        stroke-width: 1;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" fill="#111111"/>
+
+  <!-- Title -->
+  <text x="450" y="25" class="timeline-title" text-anchor="middle">
+    CMMC Level 2 Preparation Timeline
+  </text>
+
+  <!-- Timeline axis line -->
+  <line x1="80" y1="120" x2="850" y2="120" stroke="#8b6508" stroke-width="2"/>
+
+  <!-- Phase 1: Scoping & Gap Analysis (Months 1-2) -->
+  <rect x="80" y="95" width="90" height="50" rx="4" class="phase-bar" fill="#b8860b"/>
+  <text x="125" y="118" class="timeline-text" text-anchor="middle" font-weight="600">
+    Scoping &amp;
+  </text>
+  <text x="125" y="133" class="timeline-text" text-anchor="middle" font-weight="600">
+    Gap Analysis
+  </text>
+  <text x="125" y="152" class="timeline-label" text-anchor="middle">
+    M1-2
+  </text>
+
+  <!-- Phase 2: Remediation & Implementation (Months 3-8) -->
+  <rect x="170" y="75" width="210" height="50" rx="4" class="phase-bar" fill="#daa520"/>
+  <text x="275" y="102" class="timeline-text" text-anchor="middle" font-weight="600">
+    Remediation &amp; Implementation
+  </text>
+  <text x="275" y="122" class="timeline-label" text-anchor="middle">
+    M3-8
+  </text>
+
+  <!-- Phase 3: Documentation & Evidence (Months 6-10) -->
+  <rect x="380" y="75" width="130" height="50" rx="4" class="phase-bar" fill="#b8860b" opacity="0.85"/>
+  <text x="445" y="102" class="timeline-text" text-anchor="middle" font-weight="600">
+    Documentation
+  </text>
+  <text x="445" y="122" class="timeline-text" text-anchor="middle" font-weight="600">
+    &amp; Evidence
+  </text>
+  <text x="445" y="141" class="timeline-label" text-anchor="middle">
+    M6-10
+  </text>
+
+  <!-- Phase 4: Mock Assessment (Months 10-11) -->
+  <rect x="510" y="95" width="80" height="50" rx="4" class="phase-bar" fill="#daa520"/>
+  <text x="550" y="113" class="timeline-text" text-anchor="middle" font-weight="600">
+    Mock
+  </text>
+  <text x="550" y="130" class="timeline-text" text-anchor="middle" font-weight="600">
+    Assessment
+  </text>
+  <text x="550" y="152" class="timeline-label" text-anchor="middle">
+    M10-11
+  </text>
+
+  <!-- Phase 5: C3PAO Assessment (Month 12) -->
+  <rect x="590" y="95" width="70" height="50" rx="4" class="phase-bar" fill="#b8860b"/>
+  <text x="625" y="113" class="timeline-text" text-anchor="middle" font-weight="600">
+    C3PAO
+  </text>
+  <text x="625" y="130" class="timeline-text" text-anchor="middle" font-weight="600">
+    Assessment
+  </text>
+  <text x="625" y="152" class="timeline-label" text-anchor="middle">
+    M12
+  </text>
+
+  <!-- Month markers and labels -->
+  <!-- Month 1 -->
+  <line x1="80" y1="115" x2="80" y2="128" stroke="#a0a0a0" stroke-width="1"/>
+  <text x="80" y="145" class="timeline-label" text-anchor="middle">1</text>
+
+  <!-- Month 3 -->
+  <line x1="170" y1="115" x2="170" y2="128" stroke="#a0a0a0" stroke-width="1"/>
+  <text x="170" y="145" class="timeline-label" text-anchor="middle">3</text>
+
+  <!-- Month 6 -->
+  <line x1="310" y1="115" x2="310" y2="128" stroke="#a0a0a0" stroke-width="1"/>
+  <text x="310" y="145" class="timeline-label" text-anchor="middle">6</text>
+
+  <!-- Month 8 -->
+  <line x1="380" y1="115" x2="380" y2="128" stroke="#a0a0a0" stroke-width="1"/>
+  <text x="380" y="145" class="timeline-label" text-anchor="middle">8</text>
+
+  <!-- Month 10 -->
+  <line x1="450" y1="115" x2="450" y2="128" stroke="#a0a0a0" stroke-width="1"/>
+  <text x="450" y="145" class="timeline-label" text-anchor="middle">10</text>
+
+  <!-- Month 12 -->
+  <line x1="590" y1="115" x2="590" y2="128" stroke="#a0a0a0" stroke-width="1"/>
+  <text x="590" y="145" class="timeline-label" text-anchor="middle">12</text>
+
+  <!-- Legend / Additional info -->
+  <text x="80" y="200" class="timeline-label">
+    Phases may overlap • Total duration: ~12 months
+  </text>
+  <text x="80" y="220" class="timeline-label">
+    Timeline assumes efficient execution and no major remediation delays
+  </text>
+
+  <!-- Key details box -->
+  <rect x="80" y="240" width="770" height="50" rx="3" fill="none" stroke="#8b6508" stroke-width="1"/>
+  <text x="100" y="258" class="timeline-label">
+    <tspan font-weight="600" fill="#daa520">Key Points:</tspan> Phase 1 focuses on security controls assessment. Phase 2-3 run concurrently.
+  </text>
+  <text x="100" y="275" class="timeline-label">
+    Phase 4 validates readiness before official C3PAO assessment in Phase 5.
+  </text>
+</svg>
