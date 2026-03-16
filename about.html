@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About The Bronze Shield | Veteran-Owned Cybersecurity Consulting Firm</title>
+<meta name="description" content="Meet the team behind The Bronze Shield. Led by Keontay Curry, CISM — a TS/SCI cleared cybersecurity professional with 10+ years of DoD experience across Navy, Army, and Air Force programs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.thebronzeshield.com/about">
+<meta property="og:title" content="About The Bronze Shield | Veteran-Owned CMMC &amp; RMF Consulting">
+<meta property="og:description" content="10+ years of DoD cybersecurity. TS/SCI cleared. CISM certified. Meet the ISSM who builds ATO packages that pass the first time.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Keontay Curry",
+  "jobTitle": "CEO & Principal Consultant",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "The Bronze Shield",
+    "legalName": "Curry Solutions LLC"
+  },
+  "hasCredential": [
+    {"@type": "EducationalOccupationalCredential", "credentialCategory": "CISM"},
+    {"@type": "EducationalOccupationalCredential", "credentialCategory": "CompTIA Security+"}
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Information System Security Manager"
+  },
+  "knowsAbout": ["CMMC", "RMF", "NIST 800-171", "eMASS", "ATO", "FedRAMP", "Cybersecurity"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.about-hero {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+.about-photo {
+  width: 300px;
+  height: 380px;
+  background: linear-gradient(135deg, var(--shield-slate), var(--shield-gray));
+  border: 2px solid rgba(184,134,11,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-photo-placeholder {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--bronze);
+  opacity: 0.4;
+}
+.about-photo-note {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  color: var(--shield-muted);
+  text-align: center;
+  font-style: italic;
+}
+.about-bio h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--shield-white);
+  margin-bottom: 0.4rem;
+}
+.about-bio .title-line {
+  font-size: 1.05rem;
+  color: var(--bronze-light);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.about-bio .rank-line {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--shield-muted);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.about-bio p {
+  font-size: 1rem;
+  color: var(--shield-light);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.creds-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.cred-card {
+  background: var(--shield-charcoal);
+  border: 1px solid rgba(184,134,11,0.12);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.cred-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--shield-muted);
+  margin-bottom: 0.5rem;
+}
+.cred-card-value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bronze-light);
+  margin-bottom: 0.25rem;
+}
+.cred-card-desc {
+  font-size: 0.78rem;
+  color: var(--shield-silver);
+}
+.experience-timeline { margin-top: 2rem; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--bronze);
+  letter-spacing: 0.05em;
+}
+.timeline-org {
+  font-size: 0.82rem;
+  color: var(--shield-muted);
+  margin-top: 0.25rem;
+}
+.timeline-item h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--shield-white);
+  margin-bottom: 0.4rem;
+}
+.timeline-item p {
+  font-size: 0.9rem;
+  color: var(--shield-silver);
+  line-height: 1.7;
+}
+@media (max-width: 1024px) {
+  .about-hero { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .about-photo { width: 220px; height: 280px; }
+  .creds-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .creds-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">_linkedin_partner_id="LINKEDIN_PARTNER_ID";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script>
+<script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName("script")[0];var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src="https://snap.licdn.com/li.lmp-insight/insight.min.js";s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon">BS</div><div class="nav-logo-text">The Bronze <span>Shield</span></div></a>
+      <div class="nav-links">
+        <a href="services/cmmc-assessment.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="results.html">Results</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog/complete-guide-cmmc-2-0.html">Insights</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+15025550147" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(502) 555-0147</a>
+      <a href="https://calendly.com/thebronzeshield/consultation" class="btn-secondary btn-sm" target="_blank">Schedule Call</a>
+      <a href="contact.html" class="nav-cta">Get Assessment →</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu"><button class="mobile-close">✕</button><a href="index.html">Home</a><a href="services/cmmc-assessment.html">Services</a><a href="about.html">About</a><a href="results.html">Results</a><a href="resources.html">Resources</a><a href="blog/complete-guide-cmmc-2-0.html">Insights</a><a href="contact.html">Contact</a></div>
+
+<section class="page-header bg-black">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> About</div>
+    <div class="section-label">About The Bronze Shield</div>
+    <h1>Mission-Grade Cybersecurity,<br><em>Veteran-Owned &amp; Operated</em></h1>
+    <p>The Bronze Shield is the cybersecurity consulting arm of Curry Solutions LLC — a Service-Disabled Veteran-Owned Small Business delivering RMF, CMMC, and information security services to the defense industrial base.</p>
+  </div>
+</section>
+
+<section class="section bg-charcoal">
+  <div class="container">
+    <div class="about-hero">
+      <div class="about-photo">
+        <div class="about-photo-placeholder">KC</div>
+        <div class="about-photo-note">Replace with professional headshot</div>
+      </div>
+      <div class="about-bio">
+        <h2>Keontay Curry, CISM</h2>
+        <div class="title-line">CEO & Principal Consultant — The Bronze Shield</div>
+        <div class="rank-line">MSgt, Kentucky Air National Guard · Cyber Defense Operations</div>
+        <p>Keontay Curry is a service-disabled veteran and cybersecurity practitioner with over a decade of experience securing information systems across the Department of Defense. He has served as the Information System Security Manager (ISSM) of record on active DoD programs, managing the full RMF lifecycle from system categorization through Authority to Operate — including eMASS artifact development, continuous monitoring, and direct AO engagement.</p>
+        <p>His career spans multiple military branches and federal agencies: Navy PEO Digital, Army XCTC programs, Air Force cloud migration initiatives on Cloud One (AWS GovCloud at IL5), and private sector healthcare (Baptist Health System, where he served as Director of Cybersecurity and Disaster Recovery). He currently serves as a Master Sergeant in the Kentucky Air National Guard as a Cyber Defense Operator.</p>
+        <p>Keontay founded The Bronze Shield to bring practitioner-level RMF and CMMC expertise to small and mid-size defense contractors who need senior security leadership without the overhead of large consulting firms. Every engagement is led directly by him — not delegated to junior analysts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-black">
+  <div class="container">
+    <div class="section-label">Certifications &amp; Clearances</div>
+    <h2 class="section-title">Credentials That Matter<br>to Government Buyers</h2>
+    <div class="creds-grid">
+      <div class="cred-card">
+        <div class="cred-card-label">Certification</div>
+        <div class="cred-card-value">CISM</div>
+        <div class="cred-card-desc">Certified Information Security Manager — ISACA</div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-card-label">Certification</div>
+        <div class="cred-card-value">Sec+</div>
+        <div class="cred-card-desc">CompTIA Security+ (DoD 8570 IAM Level II)</div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-card-label">Clearance</div>
+        <div class="cred-card-value">TS/SCI</div>
+        <div class="cred-card-desc">Top Secret / Sensitive Compartmented Information</div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-card-label">Business</div>
+        <div class="cred-card-value">SDVOSB</div>
+        <div class="cred-card-desc">Service-Disabled Veteran-Owned Small Business</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-charcoal">
+  <div class="container">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Career History</h2>
+    <div class="experience-timeline">
+      <div class="timeline-item">
+        <div><div class="timeline-period">2024 – Present</div><div class="timeline-org">Omni Federal / Air Force</div></div>
+        <div>
+          <h4>Senior Information Systems Security Engineer / ISSM</h4>
+          <p>Leading RMF/ATO compliance for DME-ACDC system on Cloud One (AWS GovCloud IL5). Managing eMASS artifacts, CCI compliance audits across 115 IR-family CCIs, Incident Response Plan development through multiple versions, and continuous monitoring operations including ACAS/SCA findings management.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-period">2022 – 2024</div><div class="timeline-org">Navy PEO Digital</div></div>
+        <div>
+          <h4>Cybersecurity Consultant / ISSM Support</h4>
+          <p>Provided ISSM-level cybersecurity support for Navy programs. Developed and deployed AI-powered POA&amp;M automation systems that achieved measurable reductions in manual compliance processing time.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-period">2020 – 2022</div><div class="timeline-org">Baptist Health System</div></div>
+        <div>
+          <h4>Director of Cybersecurity &amp; Disaster Recovery</h4>
+          <p>Built the enterprise cybersecurity and disaster recovery program from the ground up. Implemented NIST CSF controls, incident response procedures, and business continuity planning across a multi-facility healthcare organization.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-period">2016 – 2020</div><div class="timeline-org">U.S. Army XCTC</div></div>
+        <div>
+          <h4>Cybersecurity Engineer</h4>
+          <p>Managed vulnerability assessments, continuous monitoring programs, and security authorization maintenance for Army training command systems.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-period">2010 – Present</div><div class="timeline-org">Kentucky Air National Guard</div></div>
+        <div>
+          <h4>MSgt — Cyber Defense Operator</h4>
+          <p>Active duty Air National Guard member conducting cyber defense operations. Maintains operational readiness for network defense, threat hunting, and incident response missions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-inner">
+      <h2>Ready to Work With a Practitioner, Not a Pitch Deck?</h2>
+      <p>Schedule a free consultation to discuss your RMF, CMMC, or cybersecurity compliance needs. Direct engagement with the principal — no handoff to junior staff.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn-primary">Request Consultation →</a>
+        <a href="https://calendly.com/thebronzeshield/consultation" class="btn-secondary" target="_blank">Schedule a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><div class="nav-logo-icon">BS</div><div class="nav-logo-text">The Bronze <span>Shield</span></div></div>
+        <p>Service-Disabled Veteran-Owned Small Business delivering mission-grade cybersecurity compliance for the defense industrial base.</p>
+        <div class="footer-contact-info">
+          <a href="tel:+15025550147"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(502) 555-0147</a>
+          <a href="mailto:contact@thebronzeshield.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@thebronzeshield.com</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services/cmmc-assessment.html">CMMC Assessments</a></li><li><a href="services/rmf-ato-packages.html">RMF/ATO Packages</a></li><li><a href="services/nist-800-171-gap-analysis.html">NIST 800-171</a></li><li><a href="services/continuous-monitoring.html">Continuous Monitoring</a></li><li><a href="services/incident-response-planning.html">Incident Response</a></li><li><a href="services/cloud-security.html">Cloud Security</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="resources.html">CMMC Checklist</a></li><li><a href="resources.html">RMF Playbook</a></li><li><a href="blog/complete-guide-cmmc-2-0.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="results.html">Case Studies</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://sam.gov" target="_blank">SAM.gov</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Curry Solutions LLC dba The Bronze Shield. All rights reserved.</span>
+      <div class="footer-certs"><span class="footer-cert">SDVOSB</span><span class="footer-cert">CISM</span><span class="footer-cert">Security+</span><span class="footer-cert">TS/SCI</span></div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
