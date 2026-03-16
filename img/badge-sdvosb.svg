@@ -1,35 +1,44 @@
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer ring - SBA navy blue -->
+  <circle cx="100" cy="100" r="98" fill="#002664"/>
+  <circle cx="100" cy="100" r="93" fill="#ffffff"/>
+  <circle cx="100" cy="100" r="88" fill="#002664"/>
+
+  <!-- Curved text: SERVICE-DISABLED VETERAN-OWNED around top -->
   <defs>
-    <radialGradient id="badgeBg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
-    </radialGradient>
-    <filter id="badgeShadow">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
-    </filter>
+    <path id="topArc" d="M 30,100 a 70,70 0 0,1 140,0" fill="none"/>
+    <path id="bottomArc" d="M 170,108 a 70,70 0 0,1 -140,0" fill="none"/>
   </defs>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="2.5">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">SERVICE-DISABLED</textPath>
+  </text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">SMALL BUSINESS</textPath>
+  </text>
 
-  <!-- Background circle -->
-  <circle cx="100" cy="100" r="95" fill="url(#badgeBg)" stroke="#b8860b" stroke-width="2" filter="url(#badgeShadow)"/>
+  <!-- Inner white circle -->
+  <circle cx="100" cy="100" r="50" fill="#ffffff" stroke="#002664" stroke-width="1.5"/>
 
-  <!-- Decorative outer ring -->
-  <circle cx="100" cy="100" r="90" fill="none" stroke="#daa520" stroke-width="1" opacity="0.5"/>
+  <!-- SBA shield/logo area -->
+  <text x="100" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#002664" letter-spacing="1.5">U.S. SBA</text>
 
-  <!-- Inner shield shape for badge -->
-  <path d="M 100 45 L 140 65 L 140 95 Q 140 125 100 150 Q 60 125 60 95 L 60 65 Z"
-        fill="none" stroke="#daa520" stroke-width="1.5" opacity="0.7"/>
+  <!-- Star -->
+  <polygon points="100,88 103,96 112,96 105,101 108,110 100,105 92,110 95,101 88,96 97,96" fill="#002664"/>
 
-  <!-- Main text: SDVOSB -->
-  <text x="100" y="110" font-family="Arial, sans-serif" font-size="26" font-weight="bold"
-        text-anchor="middle" fill="#daa520">SDVOSB</text>
+  <!-- VETERAN OWNED centered -->
+  <text x="100" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700" fill="#002664" letter-spacing="1">VETERAN</text>
+  <text x="100" y="135" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="700" fill="#002664" letter-spacing="1">OWNED</text>
 
-  <!-- Subtitle text -->
-  <text x="100" y="135" font-family="Arial, sans-serif" font-size="10"
-        text-anchor="middle" fill="#a0a0a0">Service-Disabled</text>
-  <text x="100" y="148" font-family="Arial, sans-serif" font-size="10"
-        text-anchor="middle" fill="#a0a0a0">Veteran-Owned</text>
+  <!-- Red CERTIFIED ribbon -->
+  <rect x="55" y="150" width="90" height="20" rx="3" fill="#BF0A30"/>
+  <text x="100" y="164" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" letter-spacing="2">CERTIFIED</text>
 
-  <!-- Decorative star elements -->
-  <circle cx="60" cy="75" r="2" fill="#b8860b"/>
-  <circle cx="140" cy="75" r="2" fill="#b8860b"/>
+  <!-- Decorative stars on navy ring -->
+  <g fill="#ffffff">
+    <polygon points="100,8 101.5,12 106,12 102.5,14.5 104,19 100,16.5 96,19 97.5,14.5 94,12 98.5,12" transform="scale(0.6) translate(67,-2)"/>
+    <polygon points="100,8 101.5,12 106,12 102.5,14.5 104,19 100,16.5 96,19 97.5,14.5 94,12 98.5,12" transform="scale(0.5) translate(40,10)"/>
+    <polygon points="100,8 101.5,12 106,12 102.5,14.5 104,19 100,16.5 96,19 97.5,14.5 94,12 98.5,12" transform="scale(0.5) translate(160,10)"/>
+    <polygon points="100,8 101.5,12 106,12 102.5,14.5 104,19 100,16.5 96,19 97.5,14.5 94,12 98.5,12" transform="scale(0.5) translate(40,340)"/>
+    <polygon points="100,8 101.5,12 106,12 102.5,14.5 104,19 100,16.5 96,19 97.5,14.5 94,12 98.5,12" transform="scale(0.5) translate(160,340)"/>
+  </g>
 </svg>
