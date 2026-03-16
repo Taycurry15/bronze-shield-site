@@ -913,6 +913,19 @@ footer {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+nav.scrolled + .mobile-menu + .services-subnav,
+nav.scrolled ~ .services-subnav {
+  top: 48px;
+}
+/* Push page content down when subnav is present */
+body:has(.services-subnav) .page-header {
+  padding-top: 12rem;
 }
 .services-subnav::-webkit-scrollbar { display: none; }
 .services-subnav-inner {
