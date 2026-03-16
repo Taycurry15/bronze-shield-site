@@ -26,14 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // ====== SERVICES SUB-NAV POSITIONING ======
   const servicesSubnav = document.querySelector('.services-subnav');
   if (servicesSubnav && nav) {
+    // Ensure normal flow positioning (override any cached fixed position)
+    servicesSubnav.style.position = 'relative';
+    servicesSubnav.style.top = 'auto';
+    servicesSubnav.style.left = 'auto';
+    servicesSubnav.style.right = 'auto';
     const positionSubnav = () => {
-      const navH = nav.getBoundingClientRect().height;
-      servicesSubnav.style.marginTop = navH + 'px';
+      servicesSubnav.style.marginTop = nav.offsetHeight + 'px';
     };
     positionSubnav();
     window.addEventListener('resize', positionSubnav);
-    // Re-position when nav shrinks on scroll
-    window.addEventListener('scroll', positionSubnav);
+    // Adjust page-header padding
+    const ph = document.querySelector('.page-header');
+    if (ph) ph.style.paddingTop = '4rem';
   }
 
   // ====== MOBILE MENU ======
