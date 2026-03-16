@@ -23,6 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ====== SERVICES SUB-NAV POSITIONING ======
+  const servicesSubnav = document.querySelector('.services-subnav');
+  if (servicesSubnav && nav) {
+    const positionSubnav = () => {
+      const navH = nav.getBoundingClientRect().height;
+      servicesSubnav.style.marginTop = navH + 'px';
+    };
+    positionSubnav();
+    window.addEventListener('resize', positionSubnav);
+    // Re-position when nav shrinks on scroll
+    window.addEventListener('scroll', positionSubnav);
+  }
+
   // ====== MOBILE MENU ======
   const toggle = document.querySelector('.mobile-toggle');
   const mobileMenu = document.getElementById('mobile-menu');

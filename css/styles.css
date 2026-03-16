@@ -914,15 +914,15 @@ footer {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-/* The subnav sits in normal flow; page-header padding-top handles
-   the fixed nav gap. We move subnav visually into that gap. */
-body:has(.services-subnav) .page-header {
-  padding-top: 7rem;
-}
+/* Subnav appears below the fixed nav in normal document flow.
+   JS sets exact margin-top based on actual nav height. */
 .services-subnav {
   position: relative;
   z-index: 998;
-  margin-top: 5rem;
+  margin-top: 4.5rem;
+}
+body:has(.services-subnav) .page-header {
+  padding-top: 4rem;
 }
 .services-subnav::-webkit-scrollbar { display: none; }
 .services-subnav-inner {
