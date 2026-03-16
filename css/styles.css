@@ -905,6 +905,52 @@ footer {
   border-radius: 4px;
 }
 
+/* ====== SERVICES SUB-NAV ====== */
+.services-subnav {
+  background: var(--shield-charcoal);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.services-subnav::-webkit-scrollbar { display: none; }
+.services-subnav-inner {
+  display: flex;
+  gap: 0;
+  min-width: max-content;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.services-subnav a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--shield-silver);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.services-subnav a:hover {
+  color: var(--shield-white);
+  background: rgba(255,255,255,0.03);
+}
+.services-subnav a.active {
+  color: var(--bronze-light);
+  border-bottom-color: var(--bronze);
+  background: rgba(184,134,11,0.04);
+}
+.services-subnav a svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
 /* ====== RESPONSIVE ====== */
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }

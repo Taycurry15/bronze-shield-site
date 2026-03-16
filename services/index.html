@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cybersecurity Compliance Services | CMMC, RMF, NIST 800-171 | The Bronze Shield</title>
+<meta name="description" content="Full-spectrum cybersecurity compliance services for defense contractors. CMMC assessment readiness, RMF/ATO packages, NIST 800-171 gap analysis, continuous monitoring, incident response, and cloud security.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.thebronzeshield.com/services">
+<meta property="og:title" content="Cybersecurity Compliance Services | The Bronze Shield">
+<meta property="og:description" content="Practitioner-led cybersecurity compliance for the defense industrial base. 6 core services from gap analysis to ATO.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Bronze Shield Cybersecurity Services",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "item": {"@type": "Service", "name": "CMMC Assessment Readiness", "url": "https://www.thebronzeshield.com/services/cmmc-assessment"}},
+    {"@type": "ListItem", "position": 2, "item": {"@type": "Service", "name": "RMF/ATO Package Development", "url": "https://www.thebronzeshield.com/services/rmf-ato-packages"}},
+    {"@type": "ListItem", "position": 3, "item": {"@type": "Service", "name": "NIST 800-171 Gap Analysis", "url": "https://www.thebronzeshield.com/services/nist-800-171-gap-analysis"}},
+    {"@type": "ListItem", "position": 4, "item": {"@type": "Service", "name": "Continuous Monitoring & ISSM Support", "url": "https://www.thebronzeshield.com/services/continuous-monitoring"}},
+    {"@type": "ListItem", "position": 5, "item": {"@type": "Service", "name": "Incident Response Planning", "url": "https://www.thebronzeshield.com/services/incident-response-planning"}},
+    {"@type": "ListItem", "position": 6, "item": {"@type": "Service", "name": "Cloud Security & FedRAMP", "url": "https://www.thebronzeshield.com/services/cloud-security"}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+/* Services overview specific */
+.services-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.svc-overview-card {
+  background: var(--shield-charcoal);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.svc-overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--bronze), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.svc-overview-card:hover {
+  border-color: rgba(184,134,11,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+.svc-overview-card:hover::before { opacity: 1; }
+.svc-overview-card .service-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(184,134,11,0.08);
+  border: 1px solid rgba(184,134,11,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--bronze-light);
+}
+.svc-overview-card .service-icon svg { width: 22px; height: 22px; }
+.svc-overview-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--shield-white);
+  margin-bottom: 0.75rem;
+}
+.svc-overview-card p {
+  font-size: 0.92rem;
+  color: var(--shield-silver);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+.svc-overview-card .svc-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.svc-highlight-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  background: rgba(184,134,11,0.06);
+  border: 1px solid rgba(184,134,11,0.12);
+  border-radius: 4px;
+  color: var(--bronze-light);
+}
+.svc-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bronze-light);
+  margin-top: auto;
+  transition: gap 0.3s;
+}
+.svc-card-link:hover { gap: 0.75rem; }
+
+/* Featured service (first card spans full width) */
+.svc-overview-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.svc-overview-card.featured .svc-featured-left {
+  display: flex;
+  flex-direction: column;
+}
+.svc-overview-card.featured .svc-featured-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.svc-featured-stat {
+  background: rgba(184,134,11,0.04);
+  border: 1px solid rgba(184,134,11,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.svc-featured-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--bronze-light);
+}
+.svc-featured-stat-label {
+  font-size: 0.72rem;
+  color: var(--shield-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* How it works section */
+.how-it-works {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.hiw-step {
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+}
+.hiw-step-num {
+  width: 48px;
+  height: 48px;
+  background: rgba(184,134,11,0.08);
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bronze-light);
+  margin: 0 auto 1rem;
+}
+.hiw-step h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--shield-white);
+  margin-bottom: 0.5rem;
+}
+.hiw-step p {
+  font-size: 0.82rem;
+  color: var(--shield-silver);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .services-overview-grid { grid-template-columns: 1fr; }
+  .svc-overview-card.featured { grid-template-columns: 1fr; }
+  .how-it-works { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .how-it-works { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="../index.html" class="nav-logo"><img src="../img/logo.svg" alt="The Bronze Shield" class="nav-logo-icon" style="width:36px;height:36px;border-radius:8px;"><div class="nav-logo-text">The Bronze <span>Shield</span></div></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Services</a>
+        <a href="../about.html">About</a>
+        <a href="../results.html">Results</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../blog/complete-guide-cmmc-2-0.html">Insights</a>
+        <a href="../faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+15023080147" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(502) 308-0147</a>
+      <a href="https://calendly.com/thebronzeshield/consultation" class="btn-secondary btn-sm" target="_blank">Schedule Call</a>
+      <a href="../contact.html" class="nav-cta">Get Assessment →</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu"><button class="mobile-close">✕</button><a href="../index.html">Home</a><a href="index.html">All Services</a><a href="cmmc-assessment.html">CMMC</a><a href="rmf-ato-packages.html">RMF/ATO</a><a href="nist-800-171-gap-analysis.html">NIST 800-171</a><a href="continuous-monitoring.html">Continuous Monitoring</a><a href="incident-response-planning.html">Incident Response</a><a href="cloud-security.html">Cloud Security</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div>
+
+<section class="page-header bg-black">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> Services</div>
+    <div class="section-label">Our Services</div>
+    <h1>Cybersecurity Compliance,<br><em>End to End</em></h1>
+    <p>Six core services covering the full lifecycle of DoD cybersecurity compliance — from initial gap assessment through continuous authorization maintenance. Every engagement led directly by a TS/SCI cleared ISSM.</p>
+  </div>
+</section>
+
+<section class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--bronze)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SDVOSB Certified</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--bronze)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>100% ATO Success Rate</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--bronze)"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>TS/SCI Cleared</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--bronze)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Navy · Army · Air Force</div>
+  </div>
+</section>
+
+<section class="section bg-black">
+  <div class="container">
+    <div class="services-overview-grid">
+
+      <!-- CMMC - Featured card -->
+      <a href="cmmc-assessment.html" class="svc-overview-card featured" style="text-decoration:none;">
+        <div class="svc-featured-left">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>CMMC Assessment Readiness</h3>
+          <p>Full-scope CMMC Level 1 and Level 2 preparation — from CUI scoping and 110-control gap analysis through SSP development and C3PAO evidence packages. We get you assessment-ready, not just audit-aware.</p>
+          <div class="svc-highlights">
+            <span class="svc-highlight-tag">CMMC 2.0</span>
+            <span class="svc-highlight-tag">110 Controls</span>
+            <span class="svc-highlight-tag">C3PAO Prep</span>
+            <span class="svc-highlight-tag">SPRS Score</span>
+          </div>
+          <span class="svc-card-link">View Service Details →</span>
+        </div>
+        <div class="svc-featured-right">
+          <div class="svc-featured-stat"><div class="svc-featured-stat-value">110</div><div class="svc-featured-stat-label">NIST Controls Assessed</div></div>
+          <div class="svc-featured-stat"><div class="svc-featured-stat-value">100%</div><div class="svc-featured-stat-label">Pass Rate</div></div>
+          <div class="svc-featured-stat"><div class="svc-featured-stat-value">3–12mo</div><div class="svc-featured-stat-label">Typical Timeline</div></div>
+          <div class="svc-featured-stat"><div class="svc-featured-stat-value">$30K+</div><div class="svc-featured-stat-label">Starting At</div></div>
+        </div>
+      </a>
+
+      <!-- RMF/ATO -->
+      <a href="rmf-ato-packages.html" class="svc-overview-card" style="text-decoration:none;">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <h3>RMF/ATO Package Development</h3>
+        <p>eMASS-ready authorization packages for DoD systems. Complete Body of Evidence including SSP, SAR, and POA&M — built to pass SCA review and AO approval the first time.</p>
+        <div class="svc-highlights">
+          <span class="svc-highlight-tag">RMF 6-Step</span>
+          <span class="svc-highlight-tag">eMASS</span>
+          <span class="svc-highlight-tag">IL4/IL5</span>
+        </div>
+        <span class="svc-card-link">View Service Details →</span>
+      </a>
+
+      <!-- NIST 800-171 -->
+      <a href="nist-800-171-gap-analysis.html" class="svc-overview-card" style="text-decoration:none;">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3>NIST 800-171 Gap Analysis</h3>
+        <p>Control-by-control assessment of your current security posture against all 110 NIST 800-171 Rev 2 requirements. Includes calculated SPRS score and prioritized remediation roadmap.</p>
+        <div class="svc-highlights">
+          <span class="svc-highlight-tag">NIST 800-171</span>
+          <span class="svc-highlight-tag">SPRS Score</span>
+          <span class="svc-highlight-tag">CUI</span>
+        </div>
+        <span class="svc-card-link">View Service Details →</span>
+      </a>
+
+      <!-- Continuous Monitoring -->
+      <a href="continuous-monitoring.html" class="svc-overview-card" style="text-decoration:none;">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Continuous Monitoring & ISSM Support</h3>
+        <p>Ongoing vulnerability management, ACAS/Nessus scan execution, POA&M tracking, and authorization maintenance. Fractional ISSM services for programs that need senior security leadership.</p>
+        <div class="svc-highlights">
+          <span class="svc-highlight-tag">ACAS/Nessus</span>
+          <span class="svc-highlight-tag">POA&M</span>
+          <span class="svc-highlight-tag">ConMon</span>
+        </div>
+        <span class="svc-card-link">View Service Details →</span>
+      </a>
+
+      <!-- Incident Response -->
+      <a href="incident-response-planning.html" class="svc-overview-card" style="text-decoration:none;">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3>Incident Response Planning</h3>
+        <p>NIST 800-61 aligned incident response plans, tabletop exercises, and DIBNET/DCISE reporting procedures. Built for DoD contractors who need to meet DFARS 252.204-7012 72-hour reporting requirements.</p>
+        <div class="svc-highlights">
+          <span class="svc-highlight-tag">NIST 800-61</span>
+          <span class="svc-highlight-tag">DFARS 7012</span>
+          <span class="svc-highlight-tag">DIBNET</span>
+        </div>
+        <span class="svc-card-link">View Service Details →</span>
+      </a>
+
+      <!-- Cloud Security -->
+      <a href="cloud-security.html" class="svc-overview-card" style="text-decoration:none;">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3>Cloud Security & FedRAMP Readiness</h3>
+        <p>Security architecture, authorization support, and compliance mapping for DoD cloud deployments. AWS GovCloud, Azure Government, and Cloud One environments at IL4 and IL5.</p>
+        <div class="svc-highlights">
+          <span class="svc-highlight-tag">AWS GovCloud</span>
+          <span class="svc-highlight-tag">IL4/IL5</span>
+          <span class="svc-highlight-tag">Cloud One</span>
+        </div>
+        <span class="svc-card-link">View Service Details →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- How engagement works -->
+<section class="section bg-charcoal">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">From First Call to Authorization</h2>
+    <p class="section-subtitle">Every engagement follows the same structured process — no surprises, no scope creep.</p>
+    <div class="how-it-works">
+      <div class="hiw-step">
+        <div class="hiw-step-num">1</div>
+        <h4>Free Consultation</h4>
+        <p>30-minute call to understand your contracts, systems, and compliance timeline. No sales pitch.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-step-num">2</div>
+        <h4>Scoping & Proposal</h4>
+        <p>Fixed-price proposal based on your actual environment. You know the cost before we start.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-step-num">3</div>
+        <h4>Hands-On Execution</h4>
+        <p>Direct engagement with the principal ISSM. Assessments, documentation, and remediation support.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-step-num">4</div>
+        <h4>Deliverables & Handoff</h4>
+        <p>Complete package delivery with knowledge transfer. Your team owns the artifacts going forward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container"><div class="cta-banner-inner">
+    <h2>Not Sure Which Service You Need?</h2>
+    <p>Start with a free consultation. We'll assess your contracts, identify your compliance requirements, and recommend the right engagement scope — no obligation.</p>
+    <div class="cta-actions">
+      <a href="../contact.html" class="btn-primary">Request Free Consultation →</a>
+      <a href="https://calendly.com/thebronzeshield/consultation" class="btn-secondary" target="_blank">Schedule a Call</a>
+    </div>
+  </div></div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><img src="../img/logo.svg" alt="The Bronze Shield" class="nav-logo-icon" style="width:36px;height:36px;border-radius:8px;"><div class="nav-logo-text">The Bronze <span>Shield</span></div></div>
+        <p>Service-Disabled Veteran-Owned Small Business delivering mission-grade cybersecurity compliance for the defense industrial base.</p>
+        <div class="footer-contact-info">
+          <a href="tel:+15023080147"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(502) 308-0147</a>
+          <a href="mailto:contact@thebronzeshield.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@thebronzeshield.com</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="cmmc-assessment.html">CMMC Assessments</a></li><li><a href="rmf-ato-packages.html">RMF/ATO Packages</a></li><li><a href="nist-800-171-gap-analysis.html">NIST 800-171</a></li><li><a href="continuous-monitoring.html">Continuous Monitoring</a></li><li><a href="incident-response-planning.html">Incident Response</a></li><li><a href="cloud-security.html">Cloud Security</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="../resources.html">CMMC Checklist</a></li><li><a href="../resources.html">RMF Playbook</a></li><li><a href="../blog/complete-guide-cmmc-2-0.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../results.html">Case Studies</a></li><li><a href="../contact.html">Contact</a></li><li><a href="https://sam.gov" target="_blank">SAM.gov</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Curry Solutions LLC dba The Bronze Shield. All rights reserved.</span>
+      <div class="footer-certs"><span class="footer-cert">SDVOSB</span><span class="footer-cert">CISM</span><span class="footer-cert">Security+</span><span class="footer-cert">TS/SCI</span></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
